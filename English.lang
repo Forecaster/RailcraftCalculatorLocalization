@@ -143,15 +143,58 @@ heatup.results.fuelperhour=Fuel/h after heating up
 heatup.results.fuelperhour=This is the amount of fuel you must provide to keep the boiler from loosing heat.
 
 //panels
+//togglesymbol should be the first letter in the toggle string
 panels.common.togglesymbol=T
 
 //changelog panel
 panels.changelog.update=NEW UPDATE!
 panels.changelog.toggle=Toggle Changelog Panel
-panels.changelog.lastupdated=Last updated
+panels.changelog.lastupdated=Last updated:
 panels.changelog.changelog=Changelog
 panels.changelog.desc=The changelog contains more information about recently added features and fixes/tweaks!
 panels.changelog.ifhidden=If hidden this panel will appear when there's been a new update. It will then hide itself again on the next reload.
+
+//options panel
+panels.options.toggle=Toggle Options Panel
+panels.options.visual=Visual Options
+panels.options.default=Default Background
+panels.options.black=Black Background
+panels.options.white=White Background
+panels.options.custom=Custom Background
+panels.options.color=Color
+
+//link panel
+panels.links.toggle=Toggle Link Panel
+panels.links.links=Links
+panels.links.home=Forecaster Home
+panels.links.railcraft=Railcraft Home
+panels.links.wiki=Railcraft Wiki
+
+//fuel list panel
+panels.fuel.toggle=Toggle Fuel List Panel
+panels.fuel.select=Select Fuel List
+panels.fuel.selected=Selected:
+panels.fuel.version=Version:
+panels.fuel.changelog=changelog
+panels.fuel.changelogdesc=See what's different in this version!
+
+//comment panel
+panels.comment.toggle=Toggle Comment Panel
+panels.comment.quick=Quick Comment
+panels.comment.ask=Ask a question, leave a suggestion, report a bug, talk to me!
+panels.comment.category=Category
+panels.comment.url=Includes the current page URL with the comment. Please leave ticked when reporting a bug!
+panels.comment.bot=Anti-bot measure: The radius times the volume of a non-existent sphere is:
+panels.comment.characters=Max 500 characters.
+panels.comment.view=View Comments
+
+//comment menu panel
+panels.commentmenu.toggle=Toggle Comment Menu Panel
+panels.commentmenu.back=Back to calculator
+panels.commentmenu.show=Show Hidden Comments
+panels.commentmenu.hide=Re-Hide Hidden Comments
+panels.commentmenu.replies=Hide Replies
+panels.commentmenu.refresh=Refresh
 
 //functions
 functions.time.day=day
