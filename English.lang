@@ -1,0 +1,112 @@
+//Comment line begins with double forward slash
+//Syntax: id=String
+main.title=Railcraft Boiler Calculator
+main.selectmode=Please select a mode.
+main.noresults=No results to show.
+main.credits=This calculator was written by $Forecaster for the Minecraft mod $Railcraft by $CovertJaguar, based on formulas provided by the author.
+main.formula=The formula for calculating fuel usage can be found on the $wiki.
+main.times=Times are directly converted from ticks, this unless your server/client always run at peak tickrate (unlikely) times will vary slightly.
+main.fuelvalues=Fules values are kept up to date with the latest public Railcraft release. (Fuels from other mods are kept up to date as best I can.)
+main.question=If you have a question, an issue or a feature suggestion (such as a specific fuel) you can $contact me and I will get back to you as soon as I can.
+main.footer=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
+main.buttonClear=Clear
+main.buttonFuelSimulation=Fuel Simulation
+main.buttonTimeSimulation=Time Simulation
+main.buttonHeatupOnly=Heatup Only
+
+//shared
+common.filterAll=Show All
+common.filterSolid=Solid only
+common.filterFluid=Fluids only
+common.filterButton=Filter Fuel List
+common.fuel=Fuel
+common.fuelDesc=(State) Name (Stack size)(Heat Value)
+common.boiler=Boiler Type
+common.numTanks=Number of Tanks (Size)
+common.numTanksDesc=Going for more than you need wasted fuel.
+common.barrel=Factorization barrel style item count
+common.barrelDesc=If off displays absolute item count.
+common.heatLevel=Starting Heat Level
+common.heatLevelDesc=Setting this to max (500 or 1000) skips the heatup in any mode.
+common.heatingProcess=Show Heating Process
+common.heatingProcessDesc=Warning! May make the page take longer to render!
+common.energy=Energy Production Report
+common.energyDesc=Displays production in selected units. Unavailable in heatup mode.
+common.average=Round Energy Average
+common.averageDesc=Select if you want energy average rounded to two decimals.
+
+common.tick=Tick
+common.fuel=Fuel
+common.heat=Heat
+common.steam=Steam
+
+submit.simulate=Simulate
+submit.resimulate=Re-Simulate
+
+//fuel options
+fuel.options.description=Fuel Simulation Mode lets you input a specific amount of fuel and see how long the boiler will run. In this mode each phase can be disabled by unticking the respective checkbox. Fuel is input in either of the two boxes. The first represents stacks, and the second single items. Both accept decimals, so you can for example enter 0.5 in the first box to get half a stack (32) of your selected fuel, or enter 0.5 in the second box to run on half an item.
+fuel.options.title=Fuel Simulation Mode
+fuel.options.heatup=Heatup Phase
+fuel.options.run=Run Phase
+fuel.options.cooldown=Cooldown Phase
+fuel.options.amount=Fuel Amount
+fuel.options.amountDesc=(S)Items or (L)Buckets, not mB
+
+//fuel results
+fuel.results.title=Results from @o>Fuel Simulation Mode@/o
+
+//heatup failed to complete
+fuel.results.ranfor=Ran for $tick ticks!
+fuel.results.outoffuel=Ran out of fuel during heatup phase after $timeString
+fuel.results.temperature=Reached a temperature of $temperature ($percentage)
+fuel.results.morefuel=Provide more fuel to reach the Run Phase.
+
+//heatup phase
+fuel.results.heatup.title=Heat-up phase
+fuel.results.heatup.timeused=Heating up took $str_time
+fuel.results.heatup.fuelpercentage=Used $str_fuelpercentageused of given fuel
+fuel.results.heatup.heatunitsitems=Used $str_fuelused heat units ($str_fuelitemsused items/buckets)
+fuel.results.heatup.skippedmax=Skipped: @oBoiler already at maxium heat!@/o
+fuel.results.heatup.skippeddesel=Skipped: @oHeatup Phase deselected@/o
+
+//run phase
+fuel.results.run.title=Run phase
+fuel.results.run.timeused=Ran for $str_time before running out of fuel
+fuel.results.run.fuelpercentage=Used $str_fuelpercentage of given fuel
+fuel.results.run.heatunitsitems=Used $str_fuelheatunits heat units ($str_fuelitems items/buckets)
+fuel.results.run.skipped=Skipped: @oRunning Phase deselected@/o
+
+//cooldown phase
+fuel.results.cooldown.title=Cooldown phase
+fuel.results.cooldown.timeused=Cooled down in $str_time
+fuel.results.cooldown.skipped=Skipped: @oCooldown Phase deselected@/o
+
+//no phases selected
+fuel.results.norun.title=@oI guess it... didn't run at all...@/o
+
+//fuel simulation summary
+fuel.results.summary.totaltime=Ran for a total of $str_time (Heatup Phase + Run Phase)
+fuel.results.summary.totalitems=Used a total of $str_items items/buckets.
+
+//time options
+time.options.desc=Days + Hours + Minutes to simulate (Decimals can be used, eg 1.5 days is 1 day and 12 hours.)
+
+//time results
+time.results.title=Results from @oTime Simulation Mode@/o
+time.results.aborted=Aborted! Completed $str_timeperc of heatup!
+time.results.moretime=Need more time to get past heatup, or increase starting heat level!
+
+time.results.ranfor=Ran for $str_time and used a total of about $str_totalfuel units of $str_fuelname!
+time.results.heatupfuel=Heatup used about $str_heatupfuel units of $str_fuelname ($str_totalfuelperc of the total fuel!)
+time.results.skipped=Heatup skipped.
+
+//heatup options
+heatup.options.round=Round Fuel Usage/h
+heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the nearest whole number.
+
+//heatup results
+heatup.results.title=Results from @oHeatup Only Mode@/o
+heatup.results.heatuptook=Heatup took $str_time
+heatup.results.itemsused=$str_itemsused fuel items were used.
+heatup.results.bucketsused=$str_bucketsused buckets of fuel were used.
+heatup.results.fuelperhour=Fuel/h after heating up
