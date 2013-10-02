@@ -13,4 +13,4 @@ The syntax for a string is id=string.
 
 To prevent html-injection no html tags are allowed in the strings.
 
-A substitute is used to represent predefined tags, currently only @o is used, this is replaced in the parser with the appropriate tag to color the text.
+Excluded are the <o> tag which is a custom tag used to apply a text style to specific strings.

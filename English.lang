@@ -1,18 +1,41 @@
 //Comment line begins with double forward slash
+//Feel free to comment as much as you like
 //Syntax: id=String
 main.title=Railcraft Boiler Calculator
 main.selectmode=Please select a mode.
 main.noresults=No results to show.
-main.credits=This calculator was written by $Forecaster for the Minecraft mod $Railcraft by $CovertJaguar, based on formulas provided by the author.
-main.formula=The formula for calculating fuel usage can be found on the $wiki.
-main.times=Times are directly converted from ticks, this unless your server/client always run at peak tickrate (unlikely) times will vary slightly.
-main.fuelvalues=Fules values are kept up to date with the latest public Railcraft release. (Fuels from other mods are kept up to date as best I can.)
-main.question=If you have a question, an issue or a feature suggestion (such as a specific fuel) you can $contact me and I will get back to you as soon as I can.
-main.footer=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
 main.buttonClear=Clear
 main.buttonFuelSimulation=Fuel Simulation
 main.buttonTimeSimulation=Time Simulation
 main.buttonHeatupOnly=Heatup Only
+
+footer.description=This calculator will tell you how much fuel of a certain type is needed to heat up a cold boiler to it's maximum temperature (Heatup Only), or tell you how long it will run with the given fuel (Fuel Simulation) or finally tell you how much fuel is required to keep the boiler running a set time (Time Simulation).
+footer.noteworthy=A few noteworthy things:
+footer.credits=This calculator was written by $Forecaster for the Minecraft mod $Railcraft by $CovertJaguar, based on formulas provided by the author.
+footer.formula=The formula for calculating fuel usage can be found on the $wiki.
+footer.times=Times are directly converted from ticks, this unless your server/client always run at peak tickrate (unlikely) times will vary slightly.
+footer.fuelvalues=Fules values are kept up to date with the latest public Railcraft release. (Fuels from other mods are kept up to date as best I can.)
+footer.question=If you have a question, an issue or a feature suggestion (such as a specific fuel) you can $contact me and I will get back to you as soon as I can.
+footer.tag=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
+
+//errors
+error.generic=Error " . $error . ": This isn't supposed to happen here! Please contact the Admin as soon as possible!
+error.numTanks=numTanks is not numeric.
+error.numTanksSmall=numTanks is too small.
+error.numTanksValue=numTanks value is greater than 500.
+error.heatLevelNum=Heat level is not numeric.
+error.heatLevelLow=Heat level too low. Needs to be at least 20. I fixed it for you. Just re-simulate.
+error.heatLevelHigh=Heat level is too high.
+error.noFuel=No fuel recieved! Simulation cannot run without fuel.
+error.fuelHigh=Fuel amount is too high.
+error.outdatedURL=Outdated url formatting.
+error.daysNum=Days is not numeric.
+error.hoursNum=Hours is not numeric.
+error.minNum=Minutes is not numeric.
+error.daysHigh=Days is too high.
+error.hoursHigh=Hours is too high.
+error.minHigh=Minutes is too high.
+error.noTime=No time given, simulation cannot run.
 
 //shared
 common.filterAll=Show All
@@ -71,33 +94,34 @@ fuel.results.heatup.title=Heat-up phase
 fuel.results.heatup.timeused=Heating up took $str_time
 fuel.results.heatup.fuelpercentage=Used $str_fuelpercentageused of given fuel
 fuel.results.heatup.heatunitsitems=Used $str_fuelused heat units ($str_fuelitemsused items/buckets)
-fuel.results.heatup.skippedmax=Skipped: @oBoiler already at maxium heat!@/o
-fuel.results.heatup.skippeddesel=Skipped: @oHeatup Phase deselected@/o
+fuel.results.heatup.skippedmax=Skipped: <o>Boiler already at maxium heat!</o>
+fuel.results.heatup.skippeddesel=Skipped: <o>Heatup Phase deselected</o>
 
 //run phase
 fuel.results.run.title=Run phase
 fuel.results.run.timeused=Ran for $str_time before running out of fuel
 fuel.results.run.fuelpercentage=Used $str_fuelpercentage of given fuel
 fuel.results.run.heatunitsitems=Used $str_fuelheatunits heat units ($str_fuelitems items/buckets)
-fuel.results.run.skipped=Skipped: @oRunning Phase deselected@/o
+fuel.results.run.skipped=Skipped: <o>Running Phase deselected</o>
 
 //cooldown phase
 fuel.results.cooldown.title=Cooldown phase
 fuel.results.cooldown.timeused=Cooled down in $str_time
-fuel.results.cooldown.skipped=Skipped: @oCooldown Phase deselected@/o
+fuel.results.cooldown.skipped=Skipped: <o>Cooldown Phase deselected</o>
 
 //no phases selected
-fuel.results.norun.title=@oI guess it... didn't run at all...@/o
+fuel.results.norun.title=<o>I guess it... didn't run at all...</o>
 
 //fuel simulation summary
 fuel.results.summary.totaltime=Ran for a total of $str_time (Heatup Phase + Run Phase)
 fuel.results.summary.totalitems=Used a total of $str_items items/buckets.
 
 //time options
+time.options.description=In Time Simulation Mode you enter the specific time you wish the boiler to run for. It will then tell you how much fuel was used during this period in total, and if the boiler was not fully heated when starting it will tell you the portion of fuel used during heatup. In this mode heatup can only be disabled by setting \"Starting Heat Level\" to the maximum temperature of the selected boiler type. The time input also accepts decimals, so you can for example enter 0.5 in the \"d(ays)\" field to have the boiler run for half a day.
 time.options.desc=Days + Hours + Minutes to simulate (Decimals can be used, eg 1.5 days is 1 day and 12 hours.)
 
 //time results
-time.results.title=Results from @oTime Simulation Mode@/o
+time.results.title=Results from <o>Time Simulation Mode</o>
 time.results.aborted=Aborted! Completed $str_timeperc of heatup!
 time.results.moretime=Need more time to get past heatup, or increase starting heat level!
 
@@ -106,11 +130,12 @@ time.results.heatupfuel=Heatup used about $str_heatupfuel units of $str_fuelname
 time.results.skipped=Heatup skipped.
 
 //heatup options
+heatup.options.description=In Heatup Only Mode there is no mode specific input with the exception of \"Round Fuel Usage/h\". This mode will simply take your boiler and calculate how long it will take to heat up, and how much of the selected fuel is required to do so. In addition it will also calculate how much fuel the boiler will need per hour of running on max heat.
 heatup.options.round=Round Fuel Usage/h
 heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the nearest whole number.
 
 //heatup results
-heatup.results.title=Results from @oHeatup Only Mode@/o
+heatup.results.title=Results from <o>Heatup Only Mode</o>
 heatup.results.heatuptook=Heatup took $str_time
 heatup.results.itemsused=$str_itemsused fuel items were used.
 heatup.results.bucketsused=$str_bucketsused buckets of fuel were used.
@@ -127,3 +152,27 @@ panels.changelog.lastupdated=Last updated
 panels.changelog.changelog=Changelog
 panels.changelog.desc=The changelog contains more information about recently added features and fixes/tweaks!
 panels.changelog.ifhidden=If hidden this panel will appear when there's been a new update. It will then hide itself again on the next reload.
+
+//functions
+functions.time.day=day
+functions.time.days=days
+functions.time.hour=hour
+functions.time.hours=hours
+functions.time.minute=minute
+functions.time.minutes=minutes
+functions.time.second=second
+functions.time.seconds=seconds
+functions.time.less=less than one second
+
+functions.energy.hobbyists=Hobbyist's Engines or
+functions.energy.commercial=Commercial Engines or
+functions.energy.industrial=Industrial Engines.
+functions.energy.turbines=steam turbines.
+functions.energy.error=ERROR: Functions received invalid data type!
+functions.energy.note=NOTE! This energy report is of production DURING heatup, not what will be produced after heating up! For this see <o>Time Simulation</o> mode or <o>Fuel Simulation</o> mode.
+functions.energy.report=Energy Report:
+functions.energy.heatup=Heatup:
+functions.energy.run=Run:
+functions.energy.cooldown=Cooldown:
+functions.energy.total=Total:
+functions.energy.average=Average/t:
