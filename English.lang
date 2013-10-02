@@ -39,6 +39,11 @@ common.tick=Tick
 common.fuel=Fuel
 common.heat=Heat
 common.steam=Steam
+common.item=item
+common.items=items
+common.bucket=bucket
+common.buckets=buckets
+common.submit=Submit
 
 submit.simulate=Simulate
 submit.resimulate=Re-Simulate
@@ -110,3 +115,15 @@ heatup.results.heatuptook=Heatup took $str_time
 heatup.results.itemsused=$str_itemsused fuel items were used.
 heatup.results.bucketsused=$str_bucketsused buckets of fuel were used.
 heatup.results.fuelperhour=Fuel/h after heating up
+heatup.results.fuelperhour=This is the amount of fuel you must provide to keep the boiler from loosing heat.
+
+//panels
+panels.common.togglesymbol=T
+
+//changelog panel
+panels.changelog.update=NEW UPDATE!
+panels.changelog.toggle=Toggle Changelog Panel
+panels.changelog.lastupdated=Last updated
+panels.changelog.changelog=Changelog
+panels.changelog.desc=The changelog contains more information about recently added features and fixes/tweaks!
+panels.changelog.ifhidden=If hidden this panel will appear when there's been a new update. It will then hide itself again on the next reload.
