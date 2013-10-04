@@ -19,7 +19,7 @@ footer.question=If you have a question, an issue or a feature suggestion (such a
 footer.tag=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
 
 //errors
-error.generic=Error " . $error . ": This isn't supposed to happen here! Please contact the Admin as soon as possible!
+error.generic=Error $error: This isn't supposed to happen here! Please contact the Admin as soon as possible!
 error.numTanks=numTanks is not numeric.
 error.numTanksSmall=numTanks is too small.
 error.numTanksValue=numTanks value is greater than 500.
@@ -58,10 +58,10 @@ common.energyDesc=Displays production in selected units. Unavailable in heatup m
 common.average=Round Energy Average
 common.averageDesc=Select if you want energy average rounded to two decimals.
 
-common.tick=Tick
-common.fuel=Fuel
-common.heat=Heat
-common.steam=Steam
+common.tick=Tick:
+common.fuel=Fuel:
+common.heat=Heat:
+common.steam=Steam:
 common.item=item
 common.items=items
 common.bucket=bucket
@@ -81,16 +81,16 @@ fuel.options.amount=Fuel Amount
 fuel.options.amountDesc=(S)Items or (L)Buckets, not mB
 
 //fuel results
-fuel.results.title=Results from @o>Fuel Simulation Mode@/o
+fuel.results.title=Results from <o>Fuel Simulation Mode:</o>
 
 //heatup failed to complete
-fuel.results.ranfor=Ran for $tick ticks!
-fuel.results.outoffuel=Ran out of fuel during heatup phase after $timeString
-fuel.results.temperature=Reached a temperature of $temperature ($percentage)
+fuel.results.ranfor=Ran for $str_tick ticks!
+fuel.results.outoffuel=Ran out of fuel during heatup phase after $str_time
+fuel.results.temperature=Reached a temperature of $str_temperature ($str_percentage)
 fuel.results.morefuel=Provide more fuel to reach the Run Phase.
 
 //heatup phase
-fuel.results.heatup.title=Heat-up phase
+fuel.results.heatup.title=Heat-up phase:
 fuel.results.heatup.timeused=Heating up took $str_time
 fuel.results.heatup.fuelpercentage=Used $str_fuelpercentageused of given fuel
 fuel.results.heatup.heatunitsitems=Used $str_fuelused heat units ($str_fuelitemsused items/buckets)
@@ -98,19 +98,19 @@ fuel.results.heatup.skippedmax=Skipped: <o>Boiler already at maxium heat!</o>
 fuel.results.heatup.skippeddesel=Skipped: <o>Heatup Phase deselected</o>
 
 //run phase
-fuel.results.run.title=Run phase
+fuel.results.run.title=Run phase:
 fuel.results.run.timeused=Ran for $str_time before running out of fuel
 fuel.results.run.fuelpercentage=Used $str_fuelpercentage of given fuel
 fuel.results.run.heatunitsitems=Used $str_fuelheatunits heat units ($str_fuelitems items/buckets)
-fuel.results.run.skipped=Skipped: <o>Running Phase deselected</o>
+fuel.results.run.skipped=Skipped: <o>Run Phase deselected</o>
 
 //cooldown phase
-fuel.results.cooldown.title=Cooldown phase
+fuel.results.cooldown.title=Cooldown phase:
 fuel.results.cooldown.timeused=Cooled down in $str_time
 fuel.results.cooldown.skipped=Skipped: <o>Cooldown Phase deselected</o>
 
 //no phases selected
-fuel.results.norun.title=<o>I guess it... didn't run at all...</o>
+fuel.results.norun.title=I guess it... didn't run at all...
 
 //fuel simulation summary
 fuel.results.summary.totaltime=Ran for a total of $str_time (Heatup Phase + Run Phase)
@@ -121,7 +121,7 @@ time.options.description=In Time Simulation Mode you enter the specific time you
 time.options.desc=Days + Hours + Minutes to simulate (Decimals can be used, eg 1.5 days is 1 day and 12 hours.)
 
 //time results
-time.results.title=Results from <o>Time Simulation Mode</o>
+time.results.title=Results from <o>Time Simulation Mode:</o>
 time.results.aborted=Aborted! Completed $str_timeperc of heatup!
 time.results.moretime=Need more time to get past heatup, or increase starting heat level!
 
@@ -135,12 +135,12 @@ heatup.options.round=Round Fuel Usage/h
 heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the nearest whole number.
 
 //heatup results
-heatup.results.title=Results from <o>Heatup Only Mode</o>
-heatup.results.heatuptook=Heatup took $str_time
+heatup.results.title=Results from <o>Heatup Only Mode:</o>
+heatup.results.heatuptook=Heatup took $str_time.
 heatup.results.itemsused=$str_itemsused fuel items were used.
 heatup.results.bucketsused=$str_bucketsused buckets of fuel were used.
-heatup.results.fuelperhour=Fuel/h after heating up
-heatup.results.fuelperhour=This is the amount of fuel you must provide to keep the boiler from loosing heat.
+heatup.results.fuelperhour=Fuel/h after heating up:
+heatup.results.fuelperhourdesc=This is the amount of fuel you must provide to keep the boiler from loosing heat.
 
 //panels
 //togglesymbol should be the first letter in the toggle string
@@ -195,6 +195,32 @@ panels.commentmenu.show=Show Hidden Comments
 panels.commentmenu.hide=Re-Hide Hidden Comments
 panels.commentmenu.replies=Hide Replies
 panels.commentmenu.refresh=Refresh
+
+//comments
+comments.main.title=Railcraft Boiler Fuel Calculator Comments
+comments.main.desc1=Bug? Praise? Hate? Tip? Suggestion? Request?
+comments.main.desc2=Doesn't matter! Anything is welcome with the following caveats:
+comments.main.desc3=Non-constructive comments may be hidden (can click above to show hidden comments).
+comments.main.desc4=Spam will be removed. Repeat offenders may be IP-banned. Bans currently last 24 hours.
+comments.main.desc5=When a new comment is posted Forecaster will automatically receive an email!
+
+comments.main.bug1=If you are reporting a bug, please include the url to the page where you found it! That will make it a lot easier for me to fix it and confirm that it is fixed!
+comments.main.bug2=If you use the comment panel the url of the current page will be included automatically!
+
+comments.main.replyto=Reply to
+comments.main.sorry=Sorry, no comments found.
+comments.main.submitted=Submitted on
+comments.main.hidden=HIDDEN! Reason:
+comments.main.id=This ID was generated from the ip the comment was submitted from. Click to show comments with this ID.
+comments.main.reply=Reply
+
+comments.error.write=Please write something in the text field.
+comments.error.long=Your message is too long ($str_length). Please write less than 500 characters.
+comments.error.submit=Could not submit comment!
+comments.error.toquick=Cannot submit comments in quick succession. Please wait.
+comments.error.twice=Cannot submit the same comment twice.
+comments.error.banned=Sorry, this ip is currently banned. Check back in 24 hours.
+comments.error.fail=You fail at spheres.
 
 //functions
 functions.time.day=day
