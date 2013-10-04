@@ -1,0 +1,247 @@
+//Comment line begins with double forward slash
+//Feel free to comment as much as you like
+//Syntax: id=String
+main.title=Railcraft Boiler Calculator
+main.selectmode=Vælg venligst en instilling.
+main.noresults=Ingen resultater.
+main.buttonClear=Ryd
+main.buttonFuelSimulation=Brændstofs Simulation
+main.buttonTimeSimulation=Tids Simulation
+main.buttonHeatupOnly=Opvarmnings Simulation
+
+footer.description=Denne calculator vil fortælle dig hvor meget brændstof af en bestemt type der skal til for at varme en kold boiler op til maximum temparatur (Opvarmnings Simulering), eller fortælle dig hvor lang tid den vil køre med brændstofet (Brændstofs Simulering) Eller til sidst fortælle hvor meget brændstof der skal til for at køre den i en bestemt længde tid (Tids Simulering).
+footer.noteworthy=Et par vigtige ting:
+footer.credits=Denne calculator er lavet af $Forecaster til Minecraft mod'et $Railcraft af $CovertJaguar, Baseret på fakta leveret af selv samme CJ.
+footer.formula=Formularen for at beregne brændstof forbrug kan findes på $wiki.
+footer.times=Tider er direkte udledt fra "ticks", med mindre din server/klient kører med max tickrate (usandsynligt) vil tiderne variere en smule.
+footer.fuelvalues=Brændstof værdier bliver holdt opdateret med de seneste offentlige Railcraft udgivelser. (brændstoffer fra andre mods bliver holdt opdateret så godt som muligt.)
+footer.question=Hvis du har et spørgsmål, et problem eller et forslag (feks. et bestemt brændstof) kan du skrive til $contact mig og jeg vil svare hurtigst muligt.
+footer.tag=Dette er lavet af Forecaster! (Med mindre det sprænger i loften, har jeg intet med det at gøre)
+
+//errors
+error.generic=Fejl $error: Dette burde ikke ske her! Kontakt venligst en admin hurtigst muligt!
+error.numTanks=numTanks er ikke et tal.
+error.numTanksSmall=numTanks er ikke stort nok.
+error.numTanksValue=numTanks værdien er større end 500.
+error.heatLevelNum=Varme niveau er ikke et tal.
+error.heatLevelLow=Varme niveau er for lavt. Skal være mindst 20. Jeg har fixet det. Bare tryk Om-Simulere.
+error.heatLevelHigh=Varme niveau er for højt.
+error.noFuel=Intet brændstof modtaget! Simulationen kan ikke køre uden brændstof.
+error.fuelHigh=Brændstof mængde er for højt.
+error.outdatedURL=Outdated url formatting.
+error.daysNum=Dage er ikke et tal.
+error.hoursNum=Timer er ikke et tal.
+error.minNum=Min er ikke et tal.
+error.daysHigh=Arg! alt for mange dage.
+error.hoursHigh=Arg! alt for mange timer.
+error.minHigh=Arg! alt for mange minutter.
+error.noTime=Intet tidsrum er valgt, simulationen kan ikke fortsætte.
+
+//shared
+common.filterAll=Hvis Alle
+common.filterSolid=Fast Brændsel
+common.filterFluid=Flydene Brændsel
+common.filterButton=Filter Brændstofs Liste
+common.fuel=Brændstof
+common.fuelDesc=(Stadie) Navn (Stack størrelse)(Varme Grader)
+common.boiler=Boiler Type
+common.numTanks=Antal Tanke (Størrelse)
+common.numTanksDesc=Gå efter mere end nu har brug for, spild af brændstof.
+common.barrel=Factorization barrel style item count
+common.barrelDesc=Hvis "off" viser absolute antal items.
+common.heatLevel=Start Varme Niveau
+common.heatLevelDesc=Sættes dette til max (500 eller 1000) sprænges Opvarmningen over i alle stadier.
+common.heatingProcess=Vis Opvarmnings Proces
+common.heatingProcessDesc=Advarsel! Kan få siden til at loade i længere tid!
+common.energy=Energy Produktions Rapport
+common.energyDesc=Viser produktionen i valgte enheder. utilgænglig i opvarmnings tilstand.
+common.average=Afrundet Energy Gennemsnit
+common.averageDesc=Vælg om du vil runde Energy gennemsnittet af til to decimaler.
+
+common.tick=Tick:
+common.fuel=Brændstof:
+common.heat=Temparatur:
+common.steam=Steam:
+common.item=item
+common.items=items
+common.bucket=spand
+common.buckets=spande
+common.submit=Gem
+
+submit.simulate=Simulere
+submit.resimulate=Om-Simulere
+
+//fuel options
+fuel.options.description=Brændstofs Simulerings tilstand lader dig vælge en bestemt mængde brændstof og ser hvor lang tid Boileren kan køre. I denne tilstand kan du fravælge de forskellige faser ved at fjerne markeringen i boksene. Brændstof er valgt i en af de to kasser. Den første er stacks og nummer to er enkelte items. Begge acceptere decimaler, så du kan feks skrive 0.5 i den første boks for at få en halv stack (32) af dit valgte brændstof, eller skrive 0.5 i den anden boks for at køre med et halvt item.
+fuel.options.title=Brændstofs Simulerings Tilstand
+fuel.options.heatup=Opvarmningsfase
+fuel.options.run=Kørselsfase
+fuel.options.cooldown=Nedkølingsfase
+fuel.options.amount=Brændstofs Mængde
+fuel.options.amountDesc=(S)Items eller (L)Spande, ikke mB
+
+//fuel results
+fuel.results.title=Resultater for <o>Brændstofs Simulerings Tilstand:</o>
+
+//heatup failed to complete
+fuel.results.ranfor=Kørte i $tick ticks!
+fuel.results.outoffuel=Løb tør for brændstof i opvarmningsfasen efter $timeString
+fuel.results.temperature=Nåde en temperatur af $temperature ($percentage)
+fuel.results.morefuel=Tilføj mere brændstof for at når til Kørselsfasen.
+
+//heatup phase
+fuel.results.heatup.title=Opvarmningsfase
+fuel.results.heatup.timeused=Opvarmningen tog $str_time
+fuel.results.heatup.fuelpercentage=Brugte $str_fuelpercentageused af det valgte brændstof
+fuel.results.heatup.heatunitsitems=Brugte $str_fuelused varme enheder ($str_fuelitemsused items/buckets)
+fuel.results.heatup.skippedmax=Sprang over: <o>Boiler er allerede varmet op til maximum!</o>
+fuel.results.heatup.skippeddesel=Sprang over: <o>Opvarmningsfase fravalgt</o>
+
+//run phase
+fuel.results.run.title=Kørselsfase
+fuel.results.run.timeused=Kørte i $str_time før den løb tør for brændstof
+fuel.results.run.fuelpercentage=Brugte $str_fuelpercentage af det valgte brændstof
+fuel.results.run.heatunitsitems=Brugte $str_fuelheatunits varme enheder ($str_fuelitems items/buckets)
+fuel.results.run.skipped=Sprang over: <o>Kørselsfase fravalgt</o>
+
+//cooldown phase
+fuel.results.cooldown.title=Nedkølingsfase
+fuel.results.cooldown.timeused=Nedkølet på $str_time
+fuel.results.cooldown.skipped=Sprang over: <o>Nedkølingsfase fravalgt</o>
+
+//no phases selected
+fuel.results.norun.title=Jeg gætter på den slet ikke kørte...
+
+//fuel simulation summary
+fuel.results.summary.totaltime=Kørte i $str_time (Opvarmnings- + Kørselsfase)
+fuel.results.summary.totalitems=Brugte $str_items items/buckets Totalt.
+
+//time options
+time.options.description=I tids simulering vælger du hvor lang tid du vil køre i. Den vil så fortælle dig hvor meget brændstof der blev brugt, og fortælle hvor meget af det der blev brugt på at varme den op, hvis den var kold. I denne tilstand kan opvarmning kun springes over ved at sætte \"Start temperatur\" til maximum temperatur for din boiler type. I tids feltet kan der også bruges komma, så du kan feks. skrive 0.5 i \"d(age)\" feltet for at køre boileren i en halv dag.
+time.options.desc=Dage + Timer + Minuter at simulere i (Decimaler kan bruges, feks 1.5 dage er 1 dag og 12 timer.)
+
+//time results
+time.results.title=Resultater for <o>Tids Simulerings tilstand</o>
+time.results.aborted=Afbrudt! Gennemførte $str_timeperc af opvarmning!
+time.results.moretime=Har brug for mere tide eller varme for at nå forbi opvarmningsfasen!
+
+time.results.ranfor=Kørte i $str_time og brugte omkring $str_totalfuel enheder $str_fuelname totalt!
+time.results.heatupfuel=Opvarmning brugte omkring $str_heatupfuel enheder $str_fuelname ($str_totalfuelperc af brændstoffet!)
+time.results.skipped=Sprang Opvarmningen over
+
+//heatup options
+heatup.options.description=I Opvarmnings tilstand er der kun ét felt \"Afrundet Brændstof forbrug/Timen\". Denne tilstand vil vise dig hvor lang tid det tager at varme din boiler op, og hvor meget af det valgt brændstof der er brug for. Desuden vil den også beregne hvor meget brændstof din boiler pr. time for at køre på max temperatur.
+heatup.options.round=Afrundet Brændstof Forbrug/Time
+heatup.options.roundDesc=hvis den er markeret så vil Brændstof forbrug/Time blive afrundet til nærmeste hele tal.
+
+//heatup results
+heatup.results.title=Resultater fra <o>kun Opvarmningfasen</o>
+heatup.results.heatuptook=Opvarmning tog $str_time
+heatup.results.itemsused=$str_itemsused brændstofs items blem brugt.
+heatup.results.bucketsused=$str_bucketsused spande med brændstof blev brugt.
+heatup.results.fuelperhour=Brændstof/timen efter opvarmning
+heatup.results.fuelperhourdesc=Dette er mængden af brændstof du har brug for at blive på maximum temperatur.
+
+//panels
+//togglesymbol should be the first letter in the toggle string
+panels.common.togglesymbol=X
+
+//changelog panel
+panels.changelog.update=NY OPDATERING!
+panels.changelog.toggle=Gem/Vis Changelog Panelet
+panels.changelog.lastupdated=Sidst Opdateret:
+panels.changelog.changelog=Changelog
+panels.changelog.desc=changelogen indeholder information om nye funktioner og fejlretninger!
+panels.changelog.ifhidden=Dette panel vil automatisk åbne hvis der blev fundet nye opdateringer. Den vil blive gemt igen næste gang du besøger siden.
+
+//options panel
+panels.options.toggle=Gem/Vis Instillinger Panelet
+panels.options.visual=Visuelle Instillinger
+panels.options.default=Standard Baggrund
+panels.options.black=Sort Baggrund
+panels.options.white=Hvid Baggrund
+panels.options.custom=Egen Baggrund
+panels.options.color=Farve
+
+//link panel
+panels.links.toggle=Gem/Vis Link Panelet
+panels.links.links=Links
+panels.links.home=Forecaster's Hjemmeside
+panels.links.railcraft=Railcraft's Hjemmeside
+panels.links.wiki=Railcraft's Wiki
+
+//fuel list panel
+panels.fuel.toggle=Gem/Vis Brændstofs liste Panelet
+panels.fuel.select=Vælg Brændstofs liste
+panels.fuel.selected=Valgt:
+panels.fuel.version=Version:
+panels.fuel.changelog=changelog
+panels.fuel.changelogdesc=Se hvad der er nyt i denne opdatering!
+
+//comment panel
+panels.comment.toggle=Gem/Vis Kommentar Panelet
+panels.comment.quick=Hurtig Kommentar
+panels.comment.ask=Spørg om noget, Kom med et godt råd, Har du fundet en fejl?, Fortæl mig det!
+panels.comment.category=Kategori
+panels.comment.url=Inkludere denne side med din kommentar. Lad venligst denne være hvis du vil rappotere en fejl!
+panels.comment.bot=Anti-bot measure: Radiusen gange med massen på en circle der ikke findes er:
+panels.comment.characters=Max 500 bogstaver/tegn.
+panels.comment.view=Vis kommentare
+
+//comment menu panel
+panels.commentmenu.toggle=Gem/Vis Kommentar menu Panelet
+panels.commentmenu.back=Tilbage tile calculatoren
+panels.commentmenu.show=Vis Gemte Kommentare
+panels.commentmenu.hide=Gem De Gemte Kommentare Igen
+panels.commentmenu.replies=Gem Svar
+panels.commentmenu.refresh=Refresh
+
+//comments
+comments.main.title=Railcraft Boiler Brændstofs Beregner Kommentare
+comments.main.desc1=Fejl? Ris? Ros? Tip? Forslag? Mangler?
+comments.main.desc2=Alt er velkommen med disse forbehold:
+comments.main.desc3=Ubrugelige kommentare kan blive gemt (Du kan vælge at vise gemte kommentarer øverst).
+comments.main.desc4=Spam vil blive fjernet. Flere overtrædelser resultere i IP-ban. Bans er på 24 timer.
+comments.main.desc5=Når der bliver skrevet en ny kommentar vil der blive sendt en mail til Forcaster!
+
+comments.main.bug1=Hvis du repportere en fejl, så inkludere URL'en på siden, så er det nemmere at finde og tjekke det er ordnet!
+comments.main.bug2=Hvis du bruger kommentar panelet vil URL'en automatisk blive inkluderet!
+
+comments.main.replyto=Svar til
+comments.main.sorry=Beklager, ingen kommentar fundet.
+comments.main.submitted=Skrevet
+comments.main.hidden=GEMT! Begrundelse:
+comments.main.id=Dette ID blev genereret fra den IP kommentaren bliv skrevet fra. Klik for at se kommentarer fra samme ID.
+comments.main.reply=Reply
+
+comments.error.write=Skriv venligst noget i tekst feltet.
+comments.error.long=Din besked er for lang ($str_length). Skriv venligst max 500 tegn.
+comments.error.submit=Kunne ikke sende din kommentar!
+comments.error.toquick=Du kan ikke sende en kommentar så hurtigt, vent veligst lidt.
+comments.error.twice=Du kan ikke sende den samme kommentar to gange.
+comments.error.banned=Surt, denne IP er lige nu banned. Kom tilbage om 24 timer.
+comments.error.fail=Du fejler vist omkring det med cirkler, hva'?.
+
+//functions
+functions.time.day=dag
+functions.time.days=dage
+functions.time.hour=time
+functions.time.hours=timer
+functions.time.minute=minut
+functions.time.minutes=minutter
+functions.time.second=sekund
+functions.time.seconds=sekunder
+functions.time.less=mindre end ét sekund
+
+functions.energy.hobbyists=Hobbyist's Engines eller
+functions.energy.commercial=Commercial Engines eller
+functions.energy.industrial=Industrial Engines.
+functions.energy.turbines=steam turbines.
+functions.energy.error=FEJL: Funktioner fik fejlagtige data typer!
+functions.energy.note=OBS! denne energy rapport er UNDER opvarmningen, ikke hvad der vil blive produceret efter opvarmningen! for dette brug <o>Tids Simulation</o> eller <o>Brændstofs Simulation</o>.
+functions.energy.report=Energy Rapport:
+functions.energy.heatup=Opvarmning:
+functions.energy.run=Kørsel:
+functions.energy.cooldown=Nedkøling:
+functions.energy.total=Totalt:
+functions.energy.average=Gennemsnit/t:
