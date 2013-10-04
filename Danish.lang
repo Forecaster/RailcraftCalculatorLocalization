@@ -16,7 +16,7 @@ footer.formula=Formularen for at beregne brændstof forbrug kan findes på $wiki
 footer.times=Tider er direkte udledt fra "ticks", med mindre din server/klient kører med max tickrate (usandsynligt) vil tiderne variere en smule.
 footer.fuelvalues=Brændstof værdier bliver holdt opdateret med de seneste offentlige Railcraft udgivelser. (brændstoffer fra andre mods bliver holdt opdateret så godt som muligt.)
 footer.question=Hvis du har et spørgsmål, et problem eller et forslag (feks. et bestemt brændstof) kan du skrive til $contact mig og jeg vil svare hurtigst muligt.
-footer.tag=Dette er lavet af Forecaster! (Med mindre det sprænger i loften, har jeg intet med det at gøre)
+footer.tag=Dette er lavet af Forecaster! (Med mindre det sprænger i luften, har jeg intet med det at gøre)
 
 //errors
 error.generic=Fejl $error: Dette burde ikke ske her! Kontakt venligst en admin hurtigst muligt!
