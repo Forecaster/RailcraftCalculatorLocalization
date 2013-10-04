@@ -11,6 +11,8 @@ Comment lines that begin with // are ignored by the parser along with empty line
 
 The syntax for a string is id=string.
 
+The "string" part is what you would translate.
+
 To prevent html-injection no html tags are allowed in the strings.
 
 Excluded are the <o> and <c> tags which is are custom tags used to apply text styles to specific strings.
