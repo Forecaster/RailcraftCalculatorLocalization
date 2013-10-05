@@ -117,7 +117,7 @@ fuel.results.summary.totaltime=Ran for a total of $str_time (Heatup Phase + Run 
 fuel.results.summary.totalitems=Used a total of $str_items items/buckets.
 
 //time options
-time.options.description=In Time Simulation Mode you enter the specific time you wish the boiler to run for. It will then tell you how much fuel was used during this period in total, and if the boiler was not fully heated when starting it will tell you the portion of fuel used during heatup. In this mode heatup can only be disabled by setting \"Starting Heat Level\" to the maximum temperature of the selected boiler type. The time input also accepts decimals, so you can for example enter 0.5 in the \"d(ays)\" field to have the boiler run for half a day.
+time.options.description=In Time Simulation Mode you enter the specific time you wish the boiler to run for. It will then tell you how much fuel was used during this period in total, and if the boiler was not fully heated when starting it will tell you the portion of fuel used during heatup. In this mode heatup can only be disabled by setting "Starting Heat Level" to the maximum temperature of the selected boiler type. The time input also accepts decimals, so you can for example enter 0.5 in the "d(ays)" field to have the boiler run for half a day.
 time.options.desc=Days + Hours + Minutes to simulate (Decimals can be used, eg 1.5 days is 1 day and 12 hours.)
 
 //time results
@@ -130,7 +130,7 @@ time.results.heatupfuel=Heatup used about $str_heatupfuel units of $str_fuelname
 time.results.skipped=Heatup skipped.
 
 //heatup options
-heatup.options.description=In Heatup Only Mode there is no mode specific input with the exception of \"Round Fuel Usage/h\". This mode will simply take your boiler and calculate how long it will take to heat up, and how much of the selected fuel is required to do so. In addition it will also calculate how much fuel the boiler will need per hour of running on max heat.
+heatup.options.description=In Heatup Only Mode there is no mode specific input with the exception of "Round Fuel Usage/h". This mode will simply take your boiler and calculate how long it will take to heat up, and how much of the selected fuel is required to do so. In addition it will also calculate how much fuel the boiler will need per hour of running on max heat.
 heatup.options.round=Round Fuel Usage/h
 heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the nearest whole number.
 
