@@ -117,7 +117,7 @@ fuel.results.summary.totaltime=Kørte i $str_time (Opvarmnings- + Kørselsfase)
 fuel.results.summary.totalitems=Brugte $str_items items/buckets Totalt.
 
 //time options
-time.options.description=I tids simulering vælger du hvor lang tid du vil køre i. Den vil så fortælle dig hvor meget brændstof der blev brugt, og fortælle hvor meget af det der blev brugt på at varme den op, hvis den var kold. I denne tilstand kan opvarmning kun springes over ved at sætte \"Start temperatur\" til maximum temperatur for din boiler type. I tids feltet kan der også bruges komma, så du kan feks. skrive 0.5 i \"d(age)\" feltet for at køre boileren i en halv dag.
+time.options.description=I tids simulering vælger du hvor lang tid du vil køre i. Den vil så fortælle dig hvor meget brændstof der blev brugt, og fortælle hvor meget af det der blev brugt på at varme den op, hvis den var kold. I denne tilstand kan opvarmning kun springes over ved at sætte "Start temperatur" til maximum temperatur for din boiler type. I tids feltet kan der også bruges komma, så du kan feks. skrive 0.5 i "d(age)" feltet for at køre boileren i en halv dag.
 time.options.desc=Dage + Timer + Minuter at simulere i (Decimaler kan bruges, feks 1.5 dage er 1 dag og 12 timer.)
 
 //time results
@@ -130,7 +130,7 @@ time.results.heatupfuel=Opvarmning brugte omkring $str_heatupfuel enheder $str_f
 time.results.skipped=Sprang Opvarmningen over
 
 //heatup options
-heatup.options.description=I Opvarmnings tilstand er der kun ét felt \"Afrundet Brændstof forbrug/Timen\". Denne tilstand vil vise dig hvor lang tid det tager at varme din boiler op, og hvor meget af det valgt brændstof der er brug for. Desuden vil den også beregne hvor meget brændstof din boiler pr. time for at køre på max temperatur.
+heatup.options.description=I Opvarmnings tilstand er der kun ét felt "Afrundet Brændstof forbrug/Timen". Denne tilstand vil vise dig hvor lang tid det tager at varme din boiler op, og hvor meget af det valgt brændstof der er brug for. Desuden vil den også beregne hvor meget brændstof din boiler pr. time for at køre på max temperatur.
 heatup.options.round=Afrundet Brændstof Forbrug/Time
 heatup.options.roundDesc=hvis den er markeret så vil Brændstof forbrug/Time blive afrundet til nærmeste hele tal.
 
