@@ -1,6 +1,10 @@
 //Comment line begins with double forward slash
 //Feel free to comment as much as you like
 //Syntax: id=String
+
+//if false, list file, if true do not list file in selection menu
+ignore=false
+
 main.title=Railcraft Boiler Calculator
 main.videos=Check out my $tutorials!
 main.videos2=(Routing & Signalling)
