@@ -6,6 +6,8 @@
 ignore=false
 
 main.title=Railcraft Boiler Calculator
+main.videos=Ta' et kig på mine $tutorials!
+main.videos2=(Routing & Signalling)
 main.selectmode=Vælg venligst en instilling.
 main.noresults=Ingen resultater.
 main.buttonClear=Ryd
