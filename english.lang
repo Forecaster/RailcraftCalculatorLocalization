@@ -21,7 +21,7 @@ footer.credits=This calculator was written by $Forecaster for the Minecraft mod 
 footer.formula=The formula for calculating fuel usage can be found on the $wiki.
 footer.times=Times are directly converted from ticks, this unless your server/client always run at peak tickrate (unlikely) times will vary slightly.
 footer.fuelvalues=Fules values are kept up to date with the latest public Railcraft release. (Fuels from other mods are kept up to date as best I can.)
-footer.question=If you have a question, an issue or a feature suggestion (such as a specific fuel) you can $contact me and I will get back to you as soon as I can.
+footer.question=If you have a question, an issue or a feature suggestion (such as a specific fuel) you can post a comment and I will reply!
 footer.tag=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
 
 //errors
