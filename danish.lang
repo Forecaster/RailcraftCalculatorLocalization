@@ -21,7 +21,7 @@ footer.credits=Denne calculator er lavet af $Forecaster til Minecraft mod'et $Ra
 footer.formula=Formularen for at beregne brændstof forbrug kan findes på $wiki.
 footer.times=Tider er direkte udledt fra "ticks", med mindre din server/klient kører med max tickrate (usandsynligt) vil tiderne variere en smule.
 footer.fuelvalues=Brændstof værdier bliver holdt opdateret med de seneste offentlige Railcraft udgivelser. (brændstoffer fra andre mods bliver holdt opdateret så godt som muligt.)
-footer.question=Hvis du har et spørgsmål, et problem eller et forslag (feks. et bestemt brændstof) kan du skrive til $contact mig og jeg vil svare hurtigst muligt.
+footer.question=Hvis du har et spørgsmål, et problem eller et forslag (feks. et bestemt brændstof) så skriv en kommentar og jeg vil svare tilbage hurtigst muligt.
 footer.tag=Dette er lavet af Forecaster! (Med mindre det sprænger i luften, har jeg intet med det at gøre)
 
 //errors
@@ -50,6 +50,8 @@ common.filterFluid=Flydene Brændsel
 common.filterButton=Filter Brændstofs Liste
 common.fuel=Brændstof
 common.fuelDesc=(Stadie) Navn (Stack størrelse)(Varme Grader)
+common.lp=Low Pressure (Max Varme: 500)
+common.hp=High Pressure (Max Varme: 1000)
 common.boiler=Boiler Type
 common.numTanks=Antal Tanke (Størrelse)
 common.numTanksDesc=Gå efter mere end nu har brug for, spild af brændstof.
