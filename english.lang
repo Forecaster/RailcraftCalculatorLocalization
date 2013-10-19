@@ -185,6 +185,7 @@ panels.fuel.selected=Selected:
 panels.fuel.version=Version:
 panels.fuel.changelog=changelog
 panels.fuel.changelogdesc=See what's different in this version!
+panels.fuel.github=The fuel lists are now on $github! Feel free to submit pull requests to add fuels or correct errors!
 
 //comment panel
 panels.comment.toggle=Toggle Comment Panel
@@ -192,7 +193,7 @@ panels.comment.quick=Quick Comment
 panels.comment.ask=Ask a question, leave a suggestion, report a bug, talk to me!
 panels.comment.category=Category
 panels.comment.url=Includes the current page URL with the comment. Please leave ticked when reporting a bug!
-panels.comment.bot=Anti-bot measure: The radius times the volume of a non-existent sphere is:
+panels.comment.bot=Anti-spam measure: What is the name of the creator of Railcraft?
 panels.comment.characters=Max 500 characters.
 panels.comment.view=View Comments
 
@@ -228,7 +229,7 @@ comments.error.submit=Could not submit comment!
 comments.error.toquick=Cannot submit comments in quick succession. Please wait.
 comments.error.twice=Cannot submit the same comment twice.
 comments.error.banned=Sorry, this ip is currently banned. Check back in 24 hours.
-comments.error.fail=You fail at spheres.
+comments.error.fail=Nope. Wrong answer.
 
 //functions
 functions.time.day=day
