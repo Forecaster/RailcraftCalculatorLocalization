@@ -7,6 +7,7 @@ ignore=false
 
 main.title=Railcraft Boiler Calculator
 main.videos=Check out my $tutorials!
+//$tutorials: Railcraft Tutorials
 main.videos2=(Routing & Signalling)
 main.selectmode=Please select a mode.
 main.noresults=No results to show.
@@ -198,6 +199,7 @@ panels.fuel.version=Version:
 panels.fuel.changelog=changelog
 panels.fuel.changelogdesc=See what's different in this version!
 panels.fuel.github=The fuel lists are now on $github! Feel free to submit pull requests to add fuels or correct errors!
+//$github: Github
 
 //comment panel
 panels.comment.toggle=Toggle Comment Panel
