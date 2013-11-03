@@ -23,4 +23,12 @@ In some strings you will find words (mostly names) preceeded by a $ sign. These 
 
 For example in the string for "footer.formula", the $wiki will be replaced with "\<a href='http://railcraft.wikispaces.com/Steam+Boiler+%28Device%29'>Railcraft Wiki\</a>" during parsing.
 
+Comments have been added to the default english.lang telling you what each tag will say after being parsed, eg. $wiki: Railcraft Wiki
+
+In the blocks where any $ tag is only used to insert numbers it will say so under the block title.
+
+eg.
+//errors
+//$ tags here are numbers only
+
 If you have any questions you may find me in #railcraft on the esper.net IRC-network.

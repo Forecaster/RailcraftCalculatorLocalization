@@ -18,13 +18,18 @@ main.buttonHeatupOnly=Heatup Only
 footer.description=This calculator will tell you how much fuel of a certain type is needed to heat up a cold boiler to it's maximum temperature (Heatup Only), or tell you how long it will run with the given fuel (Fuel Simulation) or finally tell you how much fuel is required to keep the boiler running a set time (Time Simulation).
 footer.noteworthy=A few noteworthy things:
 footer.credits=This calculator was written by $Forecaster for the Minecraft mod $Railcraft by $CovertJaguar, based on formulas provided by the author.
+//$Forecaster: Forecaster
+//$Railcraft: Railcraft
+//$Covertjaguar: CovertJaguar
 footer.formula=The formula for calculating fuel usage can be found on the $wiki.
+//$wiki: Railcraft Wiki
 footer.times=Times are directly converted from ticks, this unless your server/client always run at peak tickrate (unlikely) times will vary slightly.
 footer.fuelvalues=Fules values are kept up to date with the latest public Railcraft release. (Fuels from other mods are kept up to date as best I can.)
 footer.question=If you have a question, an issue or a feature suggestion (such as a specific fuel) you can post a comment and I will reply!
 footer.tag=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
 
 //errors
+//$ tags here are numbers only
 error.generic=Error $error: This isn't supposed to happen here! Please contact the Admin as soon as possible!
 error.numTanks=numTanks is not numeric.
 error.numTanksSmall=numTanks is too small.
@@ -92,12 +97,14 @@ fuel.options.amountDesc=(S)Items or (L)Buckets, not mB
 fuel.results.title=Results from <o>Fuel Simulation Mode:</o>
 
 //heatup failed to complete
+//$ tags here are numbers only
 fuel.results.ranfor=Ran for $str_tick ticks!
 fuel.results.outoffuel=Ran out of fuel during heatup phase after $str_time
 fuel.results.temperature=Reached a temperature of $str_temperature ($str_percentage)
 fuel.results.morefuel=Provide more fuel to reach the Run Phase.
 
 //heatup phase
+//$ tags here are numbers only
 fuel.results.heatup.title=Heat-up phase:
 fuel.results.heatup.timeused=Heating up took $str_time
 fuel.results.heatup.fuelpercentage=Used $str_fuelpercentageused of given fuel
@@ -106,6 +113,7 @@ fuel.results.heatup.skippedmax=Skipped: <o>Boiler already at maxium heat!</o>
 fuel.results.heatup.skippeddesel=Skipped: <o>Heatup Phase deselected</o>
 
 //run phase
+//$ tags here are numbers only
 fuel.results.run.title=Run phase:
 fuel.results.run.timeused=Ran for $str_time before running out of fuel
 fuel.results.run.fuelpercentage=Used $str_fuelpercentage of given fuel
@@ -113,6 +121,7 @@ fuel.results.run.heatunitsitems=Used $str_fuelheatunits heat units ($str_fuelite
 fuel.results.run.skipped=Skipped: <o>Run Phase deselected</o>
 
 //cooldown phase
+//$ tags here are numbers only
 fuel.results.cooldown.title=Cooldown phase:
 fuel.results.cooldown.timeused=Cooled down in $str_time
 fuel.results.cooldown.skipped=Skipped: <o>Cooldown Phase deselected</o>
@@ -121,6 +130,7 @@ fuel.results.cooldown.skipped=Skipped: <o>Cooldown Phase deselected</o>
 fuel.results.norun.title=I guess it... didn't run at all...
 
 //fuel simulation summary
+//$ tags here are numbers only
 fuel.results.summary.totaltime=Ran for a total of $str_time (Heatup Phase + Run Phase)
 fuel.results.summary.totalitems=Used a total of $str_items items/buckets.
 
@@ -129,6 +139,7 @@ time.options.description=In Time Simulation Mode you enter the specific time you
 time.options.desc=Days + Hours + Minutes to simulate (Decimals can be used, eg 1.5 days is 1 day and 12 hours.)
 
 //time results
+//$ tags here are numbers only
 time.results.title=Results from <o>Time Simulation Mode:</o>
 time.results.aborted=Aborted! Completed $str_timeperc of heatup!
 time.results.moretime=Need more time to get past heatup, or increase starting heat level!
@@ -143,6 +154,7 @@ heatup.options.round=Round Fuel Usage/h
 heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the nearest whole number.
 
 //heatup results
+//$ tags here are numbers only
 heatup.results.title=Results from <o>Heatup Only Mode:</o>
 heatup.results.heatuptook=Heatup took $str_time.
 heatup.results.itemsused=$str_itemsused fuel items were used.
@@ -206,6 +218,7 @@ panels.commentmenu.replies=Hide Replies
 panels.commentmenu.refresh=Refresh
 
 //comments
+//$ tags here are numbers only
 comments.main.title=Railcraft Boiler Fuel Calculator Comments
 comments.main.desc1=Bug? Praise? Hate? Tip? Suggestion? Request?
 comments.main.desc2=Doesn't matter! Anything is welcome with the following caveats:
