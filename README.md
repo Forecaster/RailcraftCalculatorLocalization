@@ -21,6 +21,6 @@ Excluded are the <o> and <c> tags which is are custom tags used to apply text st
 
 In some strings you will find words (mostly names) preceeded by a $ sign. These are used to insert links into the strings. They must not be altered.
 
-For example in the string for "footer.formula", the $wiki will be replaced with "<a href='http://railcraft.wikispaces.com/Steam+Boiler+%28Device%29'>Railcraft Wiki</a>" during parsing.
+For example in the string for "footer.formula", the $wiki will be replaced with "\<a href='http://railcraft.wikispaces.com/Steam+Boiler+%28Device%29'>Railcraft Wiki</a>" during parsing.
 
 If you have any questions you may find me in #railcraft on the esper.net IRC-network.
