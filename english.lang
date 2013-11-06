@@ -234,6 +234,7 @@ comments.main.bug2=If you use the comment panel the url of the current page will
 comments.main.replyto=Reply to
 comments.main.sorry=Sorry, no comments found.
 comments.main.submitted=Submitted on
+//"Submitted on 2013-10-27, 04:10 AM"
 comments.main.hidden=HIDDEN! Reason:
 comments.main.id=This ID was generated from the ip the comment was submitted from. Click to show comments with this ID.
 comments.main.reply=Reply
