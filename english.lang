@@ -44,9 +44,6 @@ error.outdatedURL=Outdated url formatting.
 error.daysNum=Days is not numeric.
 error.hoursNum=Hours is not numeric.
 error.minNum=Minutes is not numeric.
-error.daysHigh=Days is too high.
-error.hoursHigh=Hours is too high.
-error.minHigh=Minutes is too high.
 error.noTime=No time given, simulation cannot run.
 
 //shared
