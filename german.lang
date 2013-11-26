@@ -3,7 +3,10 @@
 //Syntax: id=String
 
 //if false, list file, if true do not list file in selection menu
-ignore=true
+ignore=false
+
+//Name to display in language dropdown menu
+displayName=German (Incomplete)
 
 main.title=Railcraft-Dampfkesselrechner
 main.videos=Schau dir meine $tutorials an!
