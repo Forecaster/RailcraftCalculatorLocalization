@@ -214,9 +214,6 @@ panels.comment.view=View Comments
 //comment menu panel
 panels.commentmenu.toggle=Toggle Comment Menu Panel
 panels.commentmenu.back=Back to calculator
-panels.commentmenu.show=Show Hidden Comments
-panels.commentmenu.hide=Re-Hide Hidden Comments
-panels.commentmenu.replies=Hide Replies
 panels.commentmenu.refresh=Refresh
 
 //comment settings panel
