@@ -71,6 +71,10 @@ common.energy=Energy Production Report
 common.energyDesc=Displays production in selected units. Unavailable in heatup mode.
 common.average=Round Energy Average
 common.averageDesc=Select if you want energy average rounded to two decimals.
+common.custom=Custom Fuel Value
+common.customDesc=Allows specifying a custom fuel value. Overrides selected fuel in Fuel menu.
+common.fuelPerSteamMultiplier=Fuel Per Steam Multiplier
+common.fuelPerSteamMultiplierDesc=This is a railcraft config option.
 
 common.tick=Tick:
 common.fuel=Fuel:
@@ -158,8 +162,7 @@ heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the near
 //$ tags here are numbers only
 heatup.results.title=Results from <o>Heatup Only Mode:</o>
 heatup.results.heatuptook=Heatup took $str_time.
-heatup.results.itemsused=$str_itemsused fuel items were used.
-heatup.results.bucketsused=$str_bucketsused buckets of fuel were used.
+heatup.results.totalitems=Used a total of $str_items items/buckets.
 heatup.results.fuelperhour=Fuel/h after heating up:
 heatup.results.fuelperhourdesc=This is the amount of fuel you must provide to keep the boiler from loosing heat.
 
