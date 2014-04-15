@@ -1,0 +1,276 @@
+//Comment line begins with double forward slash
+//Feel free to comment as much as you like
+//Syntax: id=String
+
+//if false, list file, if true do not list file in selection menu
+ignore=false
+
+//Name to display in language dropdown menu
+displayName=Swedish (Incomplete)
+select=Välj Språk
+
+main.title=Railcraft Boiler Calculator
+main.videos=Check out my $tutorials!
+//$tutorials: Railcraft Tutorials
+main.videos2=(Routing & Signalling)
+main.selectmode=Välj ett läge.
+main.noresults=Inga resultat att visa.
+main.buttonClear=Rensa
+main.buttonFuelSimulation=Bränsle Simulering
+main.buttonTimeSimulation=Tids Simulering
+main.buttonHeatupOnly=Endast Uppvärmning
+
+footer.description=Den här websidan kommer att tala om för dig hur mycket bränsle av en speciell typ krävs för att värma upp en kall ångkokare till sin max-temperatur (Endast Uppvärmning), eller tala om för dig hur länge en viss mängd bränsle räcker (Bränsle Simulering) eller slutligen tala om för dig hur mycket bränsle som krävs för att hålla igång den en bestämd tid (Tids-Simulering).
+footer.noteworthy=Några viktiga saker:
+footer.credits=Den här websidan gjordes av $Forecaster för Minecraft modden $Railcraft av $CovertJaguar, baserad på formler från skaparen.
+//$Forecaster: Forecaster
+//$Railcraft: Railcraft
+//$Covertjaguar: CovertJaguar
+footer.formula=Formels för att beräkna bränsle användning återfinns på: $wiki.
+//$wiki: Railcraft Wiki
+footer.times=Tides är konverterade från ticks, om din server inte alltid kör på maximal tickrate (inte troligt) tiderna kan variera lite.
+footer.fuelvalues=Bränsle värden hålls uppdaterade med den senaste versionen av Railcraft. (Bränslen från andra moddar hålls updaterade så bra som möjligt.)
+footer.question=Om du har en fråga, ett problem eller ett önskemål (t.ex. ett nytt bränsle) du kan $contract mej och jag kommer att svara så snart som möjligt.
+footer.tag=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
+
+//errors
+//$ tags here are numbers only
+error.generic=Error $error: Det här ska inte hända här! Kontakta Admin så snart som möjligt!
+error.numTanks=numTanks är inte numerisk.
+error.numTanksSmall=numTanks är för liten.
+error.numTanksValue=numTanks värde är högre än 500.
+error.heatLevelNum=Värme nivå är inte numerisk.
+error.heatLevelLow=Värme nivå är för lågt. Måste vara som minst 20. Jag fixade det åt dig.
+error.heatLevelHigh=Värme nivå är för högt.
+error.noFuel=Inget bränsle! Kan inte simulera utan bränsle!
+error.fuelHigh=Bränsle mängd är för högt!
+error.outdatedURL=Utdaterad URL.
+error.daysNum=Dagar än inte numerisk.
+error.hoursNum=Timmar är inte numerisk.
+error.minNum=Minuter är inte numerisk.
+error.noTime=Ingen tid. Kan inte simulera.
+
+//shared
+common.filterAll=Visa Alla
+common.filterSolid=Endast Solida
+common.filterFluid=Endast Vätskor
+common.filterButton=Filtrera Bränsle Lista
+common.fuel=Bränsle
+common.fuelDesc=(Status) Namn (Max Stack storlek)(Bränsle Värde)
+common.lp=Lågt Tryck (Max Temp: 500)
+common.hp=Högt Tryck (Max Temp: 1000)
+common.boiler=Kokar-typ
+common.numTanks=Antal Tankar (Storlek)
+common.numTanksDesc=Slösa inte bort bränsle genom att göra den större än du behöver.
+common.barrel=Räkna saker i stacks
+common.barrelDesc=Visar absoluta nummer när av.
+common.heatLevel=Värme utgångsnivå
+common.heatLevelDesc=Sätt detta till max (500 eller 1000) om du vill hoppa över uppvärming i alla lägena.
+common.heatingProcess=Visa process
+common.heatingProcessDesc=Varning! Kan göra att sidan tar lång tid att rendera!
+common.energy=Energi Produktions Rapport
+common.energyDesc=Visar produktion i vald enhet. Otillgänglig i uppvärmningsläge.
+common.average=Runda Energi Medelvärde
+common.averageDesc=Markera om du vill att energi medelvärdet ska rundas till två decimaler.
+
+common.tick=Tick:
+common.fuel=Bränsle:
+common.heat=Värme:
+common.steam=Ånga:
+common.item=sak
+common.items=saker
+common.bucket=hink
+common.buckets=hinkar
+common.submit=Skicka
+
+submit.simulate=Simulera
+submit.resimulate=Åter-simulera
+
+//fuel options
+fuel.options.description=Bränsle Simuleringen låter dig specifiera en specifik mängd bränsle och se hur länge kokaren kan drivas. I detta läge kan varje fas väljas bort genom att avmarkera respektive checkbox. Bränsle specifieras i de två rutorna. Den första representerar stacks, och den andra enskillda items. Båda accepterar decimaler, så du kan till exempel skriva 0.5 i den första för att ge en halv stack (32) av det valda bränslet, eller i den andra för att ge ett halvt item.
+fuel.options.title=Bränsle Simulering
+fuel.options.heatup=Uppvärmnings Fas
+fuel.options.run=Drift Fas
+fuel.options.cooldown=Nedkylnings Fas
+fuel.options.amount=Bränsle Mängd
+fuel.options.amountDesc=(S)Saker or (L)Hinkar, inte mB
+
+//fuel results
+fuel.results.title=Resultat från <o>Bränsle Simulering:</o>
+
+//heatup failed to complete
+//$ tags here are numbers only
+fuel.results.ranfor=Körde i $str_tick ticks!
+fuel.results.outoffuel=Bränslet tog slut under uppvärmning efter $str_time
+fuel.results.temperature=Nådde en temperatur på $str_temperature ($str_percentage)
+fuel.results.morefuel=Öka bränsle tillgången för att nå driftläget.
+
+//heatup phase
+//$ tags here are numbers only
+fuel.results.heatup.title=Uppvärmnings-fas:
+fuel.results.heatup.timeused=Uppvärmning tog $str_time
+fuel.results.heatup.fuelpercentage=Använde $str_fuelpercentageused av bränslet
+fuel.results.heatup.heatunitsitems=Använde $str_fuelused bränsle enheter ($str_fuelitemsused saker/hinkar)
+fuel.results.heatup.skippedmax=Skippad: <o>Redan på max temperatur!</o>
+fuel.results.heatup.skippeddesel=Skippad: <o>Uppvärmning inte vald</o>
+
+//run phase
+//$ tags here are numbers only
+fuel.results.run.title=Drift fas:
+fuel.results.run.timeused=Körde i $str_time innan bränslet tog slut
+fuel.results.run.fuelpercentage=Använde $str_fuelpercentage av bränslet
+fuel.results.run.heatunitsitems=Använde $str_fuelheatunits bränsle enheter  ($str_fuelitems saker/hinkar)
+fuel.results.run.skipped=Skippad: <o>Drift fas inte vald</o>
+
+//cooldown phase
+//$ tags here are numbers only
+fuel.results.cooldown.title=Nedkylnings fas:
+fuel.results.cooldown.timeused=Kyldes ner på $str_time
+fuel.results.cooldown.skipped=Skippad: <o>Nedkylnings-fas inte vald</o>
+
+//no phases selected
+fuel.results.norun.title=Verkar som om inget hände
+
+//fuel simulation summary
+//$ tags here are numbers only
+fuel.results.summary.totaltime=Körde i $str_time sammanlagt (Uppvärmning + Drift)
+fuel.results.summary.totalitems=Använde totalt $str_items saker/hinkar.
+
+//time options
+time.options.description=In Time Simulation Mode you enter the specific time you wish the boiler to run for. It will then tell you how much fuel was used during this period in total, and if the boiler was not fully heated when starting it will tell you the portion of fuel used during heatup. In this mode heatup can only be disabled by setting "Starting Heat Level" to the maximum temperature of the selected boiler type. The time input also accepts decimals, so you can for example enter 0.5 in the "d(ays)" field to have the boiler run for half a day.
+time.options.desc=Days + Hours + Minutes to simulate (Decimals can be used, eg 1.5 days is 1 day and 12 hours.)
+
+//time results
+//$ tags here are numbers only
+time.results.title=Results from <o>Time Simulation Mode:</o>
+time.results.aborted=Aborted! Completed $str_timeperc of heatup!
+time.results.moretime=Need more time to get past heatup, or increase starting heat level!
+
+time.results.ranfor=Ran for $str_time and used a total of about $str_totalfuel units of $str_fuelname!
+time.results.heatupfuel=Heatup used about $str_heatupfuel units of $str_fuelname ($str_totalfuelperc of the total fuel!)
+time.results.skipped=Heatup skipped.
+
+//heatup options
+heatup.options.description=In Heatup Only Mode there is no mode specific input with the exception of "Round Fuel Usage/h". This mode will simply take your boiler and calculate how long it will take to heat up, and how much of the selected fuel is required to do so. In addition it will also calculate how much fuel the boiler will need per hour of running on max heat.
+heatup.options.round=Round Fuel Usage/h
+heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the nearest whole number.
+
+//heatup results
+//$ tags here are numbers only
+heatup.results.title=Results from <o>Heatup Only Mode:</o>
+heatup.results.heatuptook=Heatup took $str_time.
+heatup.results.itemsused=$str_itemsused fuel items were used.
+heatup.results.bucketsused=$str_bucketsused buckets of fuel were used.
+heatup.results.fuelperhour=Fuel/h after heating up:
+heatup.results.fuelperhourdesc=This is the amount of fuel you must provide to keep the boiler from loosing heat.
+
+//panels
+//togglesymbol should be the first letter in the toggle string
+panels.common.togglesymbol=T
+
+//changelog panel
+panels.changelog.update=NEW UPDATE!
+panels.changelog.toggle=Toggle Changelog Panel
+panels.changelog.lastupdated=Last updated:
+panels.changelog.changelog=Changelog
+panels.changelog.desc=The changelog contains more information about recently added features and fixes/tweaks!
+panels.changelog.ifhidden=If hidden this panel will appear when there's been a new update. It will then hide itself again on the next reload.
+
+//options panel
+panels.options.toggle=Toggle Options Panel
+panels.options.visual=Visual Options
+panels.options.default=Default Background
+panels.options.black=Black Background
+panels.options.white=White Background
+panels.options.custom=Custom Background
+panels.options.color=Color
+
+//link panel
+panels.links.toggle=Toggle Link Panel
+panels.links.links=Links
+panels.links.home=Forecaster Home
+panels.links.railcraft=Railcraft Home
+panels.links.wiki=Railcraft Wiki
+
+//fuel list panel
+panels.fuel.toggle=Toggle Fuel List Panel
+panels.fuel.select=Select Fuel List
+panels.fuel.selected=Selected:
+panels.fuel.version=Version:
+panels.fuel.changelog=changelog
+panels.fuel.changelogdesc=See what's different in this version!
+panels.fuel.github=The fuel lists are now on $github! Feel free to submit pull requests to add fuels or correct errors!
+//$github: Github
+
+//comment panel
+panels.comment.toggle=Toggle Comment Panel
+panels.comment.quick=Quick Comment
+panels.comment.ask=Ask a question, leave a suggestion, report a bug, talk to me!
+panels.comment.category=Category
+panels.comment.url=Includes the current page URL with the comment. Please leave ticked when reporting a bug!
+panels.comment.bot=Anti-bot measure: The radius times the volume of a non-existent sphere is:
+panels.comment.characters=Max 500 characters.
+panels.comment.view=View Comments
+
+//comment menu panel
+panels.commentmenu.toggle=Toggle Comment Menu Panel
+panels.commentmenu.back=Back to calculator
+panels.commentmenu.refresh=Refresh
+
+//comment settings panel
+panels.commentsettings.toggle=Toggle Comment Settings Panel
+panels.commentsettings.showReplies=Show replies
+panels.commentsettings.showHidden=Show hidden comments
+panels.commentsettings.apply=Apply Changes
+
+//comments
+//$ tags here are numbers only
+comments.main.title=Railcraft Boiler Fuel Calculator Comments
+comments.main.desc1=Bug? Praise? Hate? Tip? Suggestion? Request?
+comments.main.desc2=Doesn't matter! Anything is welcome with the following caveats:
+comments.main.desc3=Non-constructive comments may be hidden (can click above to show hidden comments).
+comments.main.desc4=Spam will be removed. Repeat offenders may be IP-banned. Bans currently last 24 hours.
+comments.main.desc5=When a new comment is posted Forecaster will automatically receive an email!
+
+comments.main.bug1=If you are reporting a bug, please include the url to the page where you found it! That will make it a lot easier for me to fix it and confirm that it is fixed!
+comments.main.bug2=If you use the comment panel the url of the current page will be included automatically!
+
+comments.main.replyto=Reply to
+comments.main.sorry=Sorry, no comments found.
+comments.main.submitted=Submitted on
+//"Submitted on 2013-10-27, 04:10 AM"
+comments.main.hidden=HIDDEN! Reason:
+comments.main.id=This ID was generated from the ip the comment was submitted from. Click to show comments with this ID.
+comments.main.reply=Reply
+
+comments.error.write=Please write something in the text field.
+comments.error.long=Your message is too long ($str_length). Please write less than 500 characters.
+comments.error.submit=Could not submit comment!
+comments.error.toquick=Cannot submit comments in quick succession. Please wait.
+comments.error.twice=Cannot submit the same comment twice.
+comments.error.banned=Sorry, this ip is currently banned. Check back in 24 hours.
+comments.error.fail=You fail at spheres.
+
+//functions
+functions.time.day=day
+functions.time.days=days
+functions.time.hour=hour
+functions.time.hours=hours
+functions.time.minute=minute
+functions.time.minutes=minutes
+functions.time.second=second
+functions.time.seconds=seconds
+functions.time.less=less than one second
+
+functions.energy.hobbyists=Hobbyist's Engines or
+functions.energy.commercial=Commercial Engines or
+functions.energy.industrial=Industrial Engines.
+functions.energy.turbines=steam turbines.
+functions.energy.error=ERROR: Functions received invalid data type!
+functions.energy.note=NOTE! This energy report is of production DURING heatup, not what will be produced after heating up! For this see <o>Time Simulation</o> mode or <o>Fuel Simulation</o> mode.
+functions.energy.report=Energy Report:
+functions.energy.heatup=Heatup:
+functions.energy.run=Run:
+functions.energy.cooldown=Cooldown:
+functions.energy.total=Total:
+functions.energy.average=Average/t:

@@ -6,31 +6,32 @@
 ignore=false
 
 //Name to display in language dropdown menu
-displayName=English
+displayName=German (Incomplete)
+select=Sprache wählen
 
-main.title=Railcraft Boiler Calculator
-main.videos=Check out my $tutorials!
+main.title=Railcraft-Dampfkesselrechner
+main.videos=Schau dir meine $tutorials an!
 //$tutorials: Railcraft Tutorials
-main.videos2=(Routing & Signalling)
-main.selectmode=Please select a mode.
-main.noresults=No results to show.
-main.buttonClear=Clear
-main.buttonFuelSimulation=Fuel Simulation
-main.buttonTimeSimulation=Time Simulation
-main.buttonHeatupOnly=Heatup Only
+main.videos2=(Fahrplanen & Signalsysteme)
+main.selectmode=Bitte wähle einen Modus.
+main.noresults=Keine Resultate.
+main.buttonClear=Leeren
+main.buttonFuelSimulation=Treibstoffsimulation
+main.buttonTimeSimulation=Zeitsimulation
+main.buttonHeatupOnly=Nur Aufwärmzeit
 
-footer.description=This calculator will tell you how much fuel of a certain type is needed to heat up a cold boiler to it's maximum temperature (Heatup Only), or tell you how long it will run with the given fuel (Fuel Simulation) or finally tell you how much fuel is required to keep the boiler running a set time (Time Simulation).
-footer.noteworthy=A few noteworthy things:
-footer.credits=This calculator was written by $Forecaster for the Minecraft mod $Railcraft by $CovertJaguar, based on formulas provided by the author.
+footer.description=Dieser Rechner wird die sagen, wie viel Treibstoff einer bestimmten Sorte nötig ist, um einen kalten Dampfkessel auf die Maximaltemperatur aufzuheizen (Nur Aufwärmzeit), dir sagen, wie lange er mit einer bestimmten Menge Treibstoff laufen wird (Treibstoffsimulation) oder schließlich sagen, wie viel Treibstoff nötig ist, um den Dampfkessel eine bestimmte Zeit laufen zu lassen (Zeitsimulation).
+footer.noteworthy=Ein paar nennenswerte Dinge:
+footer.credits=Dieser Rechner wurde von $Forecaster geschrieben, für die Minecraft-Modifikation $Railcraft von $CovertJaguar, basierend auf von dem Autor bereitgestellten Formeln.
 //$Forecaster: Forecaster
 //$Railcraft: Railcraft
 //$Covertjaguar: CovertJaguar
-footer.formula=The formula for calculating fuel usage can be found on the $wiki.
+footer.formula=Die Formel, um Treifstoffverbrauch zu berechnen, kann im $wiki gefunden werden.
 //$wiki: Railcraft Wiki
-footer.times=Times are directly converted from ticks, this unless your server/client always run at peak tickrate (unlikely) times will vary slightly.
-footer.fuelvalues=Fules values are kept up to date with the latest public Railcraft release. (Fuels from other mods are kept up to date as best I can.)
-footer.question=If you have a question, an issue or a feature suggestion (such as a specific fuel) you can post a comment and I will reply!
-footer.tag=This has been a product of Forecaster! (Unless it blows up, then I had nothing to do with it!)
+footer.times=Zeiten sind direkt von Ticks konvertiert, dies wird leicht variieren, es sei denn, dass dein Server/Client durchgehend mit maximaler Tickrate (unwahrscheinlich) läuft.
+footer.fuelvalues=Treibstoffwerte werden mit dem neuesten öffentlichen Railcraft-Release synchron gehalten. (Treibstoffe von anderen Mods werden so gut wir möglich aktuell gehalten.)
+footer.question=Wenn du eine Frage, ein Problem oder einen Vorschlag hast (wie z.B. eine bestimmte Treibstoffart), kannst du ein Kommentar posten und ich werde antworten!
+footer.tag=Dies ist ein Produkt von Forecaster! (Außer es explodiert, dann hatte ich nichts damit zu tun!)
 
 //errors
 //$ tags here are numbers only
@@ -47,6 +48,9 @@ error.outdatedURL=Outdated url formatting.
 error.daysNum=Days is not numeric.
 error.hoursNum=Hours is not numeric.
 error.minNum=Minutes is not numeric.
+error.daysHigh=Days is too high.
+error.hoursHigh=Hours is too high.
+error.minHigh=Minutes is too high.
 error.noTime=No time given, simulation cannot run.
 
 //shared
@@ -55,7 +59,7 @@ common.filterSolid=Solid only
 common.filterFluid=Fluids only
 common.filterButton=Filter Fuel List
 common.fuel=Fuel
-common.fuelDesc=(State) Name (Max Stack size)(Heat Value)
+common.fuelDesc=(State) Name (Stack size)(Heat Value)
 common.lp=Low Pressure (Max Heat: 500)
 common.hp=High Pressure (Max Heat: 1000)
 common.boiler=Boiler Type
@@ -71,10 +75,6 @@ common.energy=Energy Production Report
 common.energyDesc=Displays production in selected units. Unavailable in heatup mode.
 common.average=Round Energy Average
 common.averageDesc=Select if you want energy average rounded to two decimals.
-common.custom=Custom Fuel Value
-common.customDesc=Allows specifying a custom fuel value. Overrides selected fuel in Fuel menu.
-common.fuelPerSteamMultiplier=Fuel Per Steam Multiplier
-common.fuelPerSteamMultiplierDesc=This is a railcraft config option.
 
 common.tick=Tick:
 common.fuel=Fuel:
@@ -162,7 +162,8 @@ heatup.options.roundDesc=When ticked fuel usage/h will be rounded up to the near
 //$ tags here are numbers only
 heatup.results.title=Results from <o>Heatup Only Mode:</o>
 heatup.results.heatuptook=Heatup took $str_time.
-heatup.results.totalitems=Used a total of $str_items items/buckets.
+heatup.results.itemsused=$str_itemsused fuel items were used.
+heatup.results.bucketsused=$str_bucketsused buckets of fuel were used.
 heatup.results.fuelperhour=Fuel/h after heating up:
 heatup.results.fuelperhourdesc=This is the amount of fuel you must provide to keep the boiler from loosing heat.
 
@@ -205,74 +206,70 @@ panels.fuel.github=The fuel lists are now on $github! Feel free to submit pull r
 //$github: Github
 
 //comment panel
-panels.comment.toggle=Toggle Comment Panel
-panels.comment.quick=Quick Comment
-panels.comment.ask=Ask a question, leave a suggestion, report a bug, talk to me!
-panels.comment.category=Category
-panels.comment.url=Includes the current page URL with the comment. Please leave ticked when reporting a bug!
-panels.comment.bot=Anti-spam measure: What is the name of the creator of Railcraft?
-panels.comment.characters=Max 500 characters.
-panels.comment.view=View Comments
+panels.comment.toggle=Kommentarfeld schalten
+panels.comment.quick=Schnellkommentar
+panels.comment.ask=Stelle eine Frage, mache einen Vorschlag, berichte einen Bug, sprich mit mir!
+panels.comment.category=Kategorie
+panels.comment.url=Fügt dem Kommentar die aktuelle Seiten-URL bei. Bitte lasse das abgehakt, wenn du einen Bug berichtest!
+panels.comment.bot=Anti-Spam-Test: Wie lautet der name des Autors von Railcraft?
+panels.comment.characters=Max 500 Zeichen.
+panels.comment.view=Zeige Kommentare
 
 //comment menu panel
-panels.commentmenu.toggle=Toggle Comment Menu Panel
-panels.commentmenu.back=Back to calculator
-panels.commentmenu.refresh=Refresh
-
-//comment settings panel
-panels.commentsettings.toggle=Toggle Comment Settings Panel
-panels.commentsettings.showReplies=Show replies
-panels.commentsettings.showHidden=Show hidden comments
-panels.commentsettings.apply=Apply Changes
+panels.commentmenu.toggle=Kommentar-Menüfeld schalten
+panels.commentmenu.back=Zurück zum Rechner
+panels.commentmenu.show=Zeige versteckte Kommentare
+panels.commentmenu.hide=Blende versteckte Kommentare wieder aus
+panels.commentmenu.replies=Antworten ausblenden
+panels.commentmenu.refresh=Neu laden
 
 //comments
 //$ tags here are numbers only
-comments.main.title=Railcraft Boiler Fuel Calculator Comments
-comments.main.desc1=Bug? Praise? Hate? Tip? Suggestion? Request?
-comments.main.desc2=Doesn't matter! Anything is welcome with the following caveats:
-comments.main.desc3=Non-constructive comments may be hidden (can click above to show hidden comments).
-comments.main.desc4=Spam will be removed. Repeat offenders may be IP-banned. Bans currently last 24 hours.
-comments.main.desc5=When a new comment is posted Forecaster will automatically receive an email!
+comments.main.title=Railcraft-Dampfkesseltreibstoffrechner-Kommentare
+comments.main.desc1=Bug? Lob? Hass? Tipp? Ideen? Wünsche?
+comments.main.desc2=Ganz egal! Alles ist willkommen mit folgenden Einschränkungen:
+comments.main.desc3=Nicht-konstruktive Kommentare dürfen versteckt werden (es kann darüber geklickt werden, um versteckte Kommentare anzeigen zu lassen).
+comments.main.desc4=Spam wird entfernt. Wiederholend den selben Kommentar zu schreiben, wird mit IP-Bann belohnt. Banne gelten momentan 24 Stunden.
+comments.main.desc5=Wenn ein neuer Kommentar gepostet wurde, wird Forecaster automatisch eine Email bekommen!
 
-comments.main.bug1=If you are reporting a bug, please include the url to the page where you found it! That will make it a lot easier for me to fix it and confirm that it is fixed!
-comments.main.bug2=If you use the comment panel the url of the current page will be included automatically!
+comments.main.bug1=Wenn du einen Bug berichten möchtest, füge bitte die URL zu der Seite, wo du ihn gefunden hast, bei! Das wird es für mich deutlich einfacher machen, ihn zu beseitigen und sicherzugehen, dass er beseitigt wurde!
+comments.main.bug2=Wenn du das Kommentar-Feld nutzt, wird die URL der aktuellen Seite automatisch beigefügt!
 
-comments.main.replyto=Reply to
-comments.main.sorry=Sorry, no comments found.
-comments.main.submitted=Submitted on
-//"Submitted on 2013-10-27, 04:10 AM"
-comments.main.hidden=HIDDEN! Reason:
+comments.main.replyto=Antwort an
+comments.main.sorry=Sorry, keine Kommentare gefunden.
+comments.main.submitted=Gesendet am
+comments.main.hidden=VERSTECKT! Grund:
 comments.main.id=This ID was generated from the ip the comment was submitted from. Click to show comments with this ID.
-comments.main.reply=Reply
+comments.main.reply=Antworten
 
-comments.error.write=Please write something in the text field.
-comments.error.long=Your message is too long ($str_length). Please write less than 500 characters.
-comments.error.submit=Could not submit comment!
-comments.error.toquick=Cannot submit comments in quick succession. Please wait.
-comments.error.twice=Cannot submit the same comment twice.
-comments.error.banned=Sorry, this ip is currently banned. Check back in 24 hours.
-comments.error.fail=Nope. Wrong answer.
+comments.error.write=Bitte schreibe etwas in das Textfeld.
+comments.error.long=Deine Nachricht ist zu lang ($str_length). Bitte schreibe weniger als 500 Zeichen.
+comments.error.submit=Konnte Kommentar nicht abschicken!
+comments.error.toquick=Kann keine Kommentare so schnell hintereinander abschicken. Bitte warte.
+comments.error.twice=Du kannst den selben Kommentar nicht zweimal abschicken.
+comments.error.banned=Sorry, diese IP ist momentan gebannt. Schaue in 24 Stunden wieder nach.
+comments.error.fail=Nope. Falsche Antwort.
 
 //functions
-functions.time.day=day
-functions.time.days=days
-functions.time.hour=hour
-functions.time.hours=hours
-functions.time.minute=minute
-functions.time.minutes=minutes
-functions.time.second=second
-functions.time.seconds=seconds
-functions.time.less=less than one second
+functions.time.day=Tag
+functions.time.days=Tage
+functions.time.hour=Stunde
+functions.time.hours=Stunden
+functions.time.minute=Minute
+functions.time.minutes=Minuten
+functions.time.second=Sekunde
+functions.time.seconds=Sekunden
+functions.time.less=Weniger als eine Sekunde
 
-functions.energy.hobbyists=Hobbyist's Engines or
-functions.energy.commercial=Commercial Engines or
-functions.energy.industrial=Industrial Engines.
-functions.energy.turbines=steam turbines.
-functions.energy.error=ERROR: Functions received invalid data type!
-functions.energy.note=NOTE! This energy report is of production DURING heatup, not what will be produced after heating up! For this see <o>Time Simulation</o> mode or <o>Fuel Simulation</o> mode.
-functions.energy.report=Energy Report:
-functions.energy.heatup=Heatup:
-functions.energy.run=Run:
-functions.energy.cooldown=Cooldown:
-functions.energy.total=Total:
-functions.energy.average=Average/t:
+functions.energy.hobbyists=Bastler-Dampfmaschine oder
+functions.energy.commercial=Hobby-Dampfmaschiene oder
+functions.energy.industrial=Industrie-Dampfmaschine.
+functions.energy.turbines=Dampfturbinen.
+functions.energy.error=ERROR: Funktionen empfingen ungültigen Datentyp!
+functions.energy.note=ANMERKUNG! Dieser Energiereport gilt für Produktion WÄHREND des Aufheizens, nicht, was nach dem Aufheizen produziert wird! Dafür siehe <o>Zeitsimulations</o>modus oder <o>Treibstoffsimulations</o>modus.
+functions.energy.report=Energiereport:
+functions.energy.heatup=Aufwärmen:
+functions.energy.run=Laufen:
+functions.energy.cooldown=Abkühlen:
+functions.energy.total=Gesamt:
+functions.energy.average=Durchschnitt/t:

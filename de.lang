@@ -7,6 +7,7 @@ ignore=false
 
 //Name to display in language dropdown menu
 displayName=Danish
+select=Vælg sprog
 
 main.title=Railcraft Boiler Calculator
 main.videos=Ta' et kig på mine $tutorials!
