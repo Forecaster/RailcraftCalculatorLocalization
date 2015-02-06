@@ -209,7 +209,6 @@ panels.fuel.github=The fuel lists are now on $github! Feel free to submit pull r
 panels.comment.toggle=Toggle Comment Panel
 panels.comment.quick=Quick Comment
 panels.comment.ask=Ask a question, leave a suggestion, report a bug, talk to me!
-panels.comment.category=Category
 panels.comment.url=Includes the current page URL with the comment. Please leave ticked when reporting a bug!
 panels.comment.bot=Anti-spam measure: What is the name of the creator of Railcraft?
 panels.comment.characters=Max 500 characters.
@@ -240,6 +239,7 @@ comments.main.bug2=If you use the comment panel the url of the current page will
 
 comments.main.new=Submit new comment:
 comments.main.replyto=Reply to
+comments.main.category=Category
 comments.main.sorry=Sorry, no comments found.
 comments.main.submitted=Submitted on
 //"Submitted on 2013-10-27, 04:10 AM"
