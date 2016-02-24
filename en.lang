@@ -165,7 +165,7 @@ heatup.results.title=Results from <o>Heatup Only Mode:</o>
 heatup.results.heatuptook=Heatup took $str_time.
 heatup.results.totalitems=Used a total of $str_items items/buckets.
 heatup.results.fuelperhour=Fuel/h after heating up:
-heatup.results.fuelperhourdesc=This is the amount of fuel you must provide to keep the boiler from loosing heat.
+heatup.results.fuelperhourdesc=This is the amount of fuel you must provide to keep the boiler from losing heat.
 
 //panels
 //togglesymbol should be the first letter in the toggle string
@@ -176,6 +176,7 @@ panels.changelog.update=NEW UPDATE!
 panels.changelog.toggle=Toggle Changelog Panel
 panels.changelog.lastupdated=Last updated:
 panels.changelog.changelog=Changelog
+panels.changelog.changelog2=Changelog White Background
 panels.changelog.desc=The changelog contains more information about recently added features and fixes/tweaks!
 panels.changelog.ifhidden=If hidden this panel will appear when there's been a new update. It will then hide itself again on the next reload.
 
@@ -211,7 +212,7 @@ panels.comment.quick=Quick Comment
 panels.comment.ask=Ask a question, leave a suggestion, report a bug, talk to me!
 panels.comment.url=Includes the current page URL with the comment. Please leave ticked when reporting a bug!
 panels.comment.bot=Anti-spam measure: What is the name of the creator of Railcraft?
-panels.comment.characters=Max 500 characters.
+panels.comment.characters=Max 1000 characters.
 panels.comment.view=View Comments
 
 //comment menu panel
@@ -251,13 +252,16 @@ comments.main.email=Email - Optional. Enter to receive reply notifications.
 comments.main.emailconf=Your email address will not be displayed or otherwise publicly available to anyone.
 
 comments.error.write=Please write something in the text field.
-comments.error.long=Your message is too long ($str_length). Please write less than 500 characters.
+comments.error.long=Your message is too long ! Please write less than 1000 characters.
 comments.error.submit=Could not submit comment!
 comments.error.toquick=Cannot submit comments in quick succession. Please wait.
 comments.error.twice=Cannot submit the same comment twice.
 comments.error.banned=Sorry, this ip is currently banned. Check back in 24 hours.
 comments.error.fail=Nope. Wrong answer.
 comments.error.email=Either the email is invalid or the domain did not exist or cannot accept emails.
+
+//Fuel list management
+fuellistpage.title=Fuel List Management
 
 //functions
 functions.time.day=day
