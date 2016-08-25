@@ -98,6 +98,8 @@ fuel.options.run=Run Phase
 fuel.options.cooldown=Cooldown Phase
 fuel.options.amount=Fuel Amount
 fuel.options.amountDesc=(S)Items or (L)Buckets, not mB
+fuel.options.heatupaverage=Include heatup phase in average
+fuel.options.cooldownaverage=Include cooldown phase in average
 
 //fuel results
 fuel.results.title=Results from <o>Fuel Simulation Mode:</o>
